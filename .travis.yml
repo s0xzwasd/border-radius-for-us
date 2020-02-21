@@ -1,3 +1,4 @@
+os: linux
 language: node_js
 node_js:
   - "stable"
@@ -9,7 +10,7 @@ script:
   - npm run build
 deploy:
   provider: surge
-  skip_cleanup: true
+  cleanup: true
   domain: b-radius-for-us.surge.sh
   project: ./build/
 on:
