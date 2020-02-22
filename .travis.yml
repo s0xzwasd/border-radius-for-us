@@ -1,7 +1,7 @@
 os: linux
 language: node_js
 node_js:
-  - "stable"
+  - 'stable'
 cache:
   directories:
     - node_modules
@@ -11,7 +11,7 @@ script:
 deploy:
   provider: surge
   cleanup: true
-  domain: b-radius-for-us.surge.sh
+  domain: https://b-radius-for-us.surge.sh
   project: ./build/
 on:
   branch: master
