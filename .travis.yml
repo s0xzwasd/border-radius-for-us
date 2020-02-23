@@ -10,7 +10,6 @@ script:
   - npm run build
 deploy:
   provider: surge
-  cleanup: true
   skip_cleanup: true
   domain: b-radius-for-us.surge.sh
   project: /build
