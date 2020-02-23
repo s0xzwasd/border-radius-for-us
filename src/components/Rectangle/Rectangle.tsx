@@ -1,5 +1,5 @@
 import React from 'react';
-import styles from './Rectangle.module.css';
+import styles from './Rectangle.module.scss';
 
 type Props = { children?: React.ReactNode };
 
