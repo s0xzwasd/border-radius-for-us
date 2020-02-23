@@ -6,12 +6,12 @@ cache:
   directories:
     - node_modules
 script:
-  - yarn test
-  - yarn build
+  - npm run test
+  - npm run build
 deploy:
   provider: surge
   cleanup: true
-  domain: https://b-radius-for-us.surge.sh
+  domain: b-radius-for-us.surge.sh
   project: ./build/
 on:
   branch: master
