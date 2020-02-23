@@ -12,6 +12,6 @@ deploy:
   provider: surge
   cleanup: true
   domain: b-radius-for-us.surge.sh
-  project: ./build/
+  project: /.
 on:
   branch: master
