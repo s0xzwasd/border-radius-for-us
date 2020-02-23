@@ -1,8 +1,10 @@
 import React from 'react';
 import styles from './Rectangle.module.css';
 
-const Input: React.SFC = () => {
-  return <input className={styles.input} />;
+type Props = { children?: React.ReactNode };
+
+const Rectangle: React.SFC = ({ children }: Props) => {
+  return <div className={styles.rectangle}>{children}</div>;
 };
 
-export default Input;
+export default Rectangle;

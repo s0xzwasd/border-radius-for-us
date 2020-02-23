@@ -1,3 +1,3 @@
-import Input from './Rectangle';
+import Rectangle from './Rectangle';
 
-export default Input;
+export default Rectangle;

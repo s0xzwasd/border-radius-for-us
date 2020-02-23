@@ -1,3 +1,14 @@
-.input {
-  box-sizing: border-box;
+.rectangle {
+  position: relative;
+  width: 35%;
+  height: 35%;
+  margin: 0 auto;
+  padding: 2%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  transform: translateY(50%);
+  background-color: #baacbd;
+  border-radius: 5px;
 }
