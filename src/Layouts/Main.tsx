@@ -9,7 +9,7 @@ const Layout: React.SFC = () => {
   return (
     <div className={styles.wrapper}>
       <Header>border-radius generator</Header>
-      <Rectangle>
+      <Rectangle currentValue={0}>
         <Clipboard />
         <Input absolute position="to-top-left" />
         <Input absolute position="to-top-right" />
