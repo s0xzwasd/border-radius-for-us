@@ -5,6 +5,7 @@ import styles from './Input.module.scss';
 type Props = {
   absolute: true | false;
   position?: 'to-top-left' | 'to-top-right' | 'to-bottom-left' | 'to-bottom-right';
+  updateData?: any;
 };
 
 type State = {
@@ -12,16 +13,13 @@ type State = {
 };
 
 class Input extends React.PureComponent<Props, State> {
-  constructor(props: Props) {
-    super(props);
-
-    this.state = {
-      value: 0,
-    };
-  }
+  state = {
+    value: 0,
+  };
 
   handleChange = (e: ChangeEvent<HTMLInputElement>) => {
-    this.setState({ value: e.target.value });
+    this.setState({ value: e.target.value }, () => this.props.updateData(this.state.value));
+    console.log('value input', this.state.value);
   };
 
   render() {
