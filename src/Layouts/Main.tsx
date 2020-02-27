@@ -7,23 +7,38 @@ import styles from './Main.module.scss';
 
 class Layout extends React.PureComponent {
   state = {
-    value: 0,
+    topLeft: 0,
+    topRight: 0,
+    bottomLeft: 0,
+    bottomRight: 0,
   };
 
-  updateData = (value: React.ChangeEvent<HTMLInputElement>) => {
-    this.setState({ value: value });
+  updateDataTopLeft = (value: React.ChangeEvent<HTMLInputElement>) => {
+    this.setState({ topLeft: value });
+  };
+
+  updateDataTopRight = (value: React.ChangeEvent<HTMLInputElement>) => {
+    this.setState({ topRight: value });
+  };
+
+  updateDataBottomLeft = (value: React.ChangeEvent<HTMLInputElement>) => {
+    this.setState({ bottomLeft: value });
+  };
+
+  updateDataBottomRight = (value: React.ChangeEvent<HTMLInputElement>) => {
+    this.setState({ bottomRight: value });
   };
 
   render() {
     return (
       <div className={styles.wrapper}>
         <Header>border-radius generator</Header>
-        <Rectangle currentValue={this.state.value}>
-          <Clipboard currentValue={this.state.value} />
-          <Input updateData={this.updateData} absolute position="to-top-left" />
-          <Input absolute position="to-top-right" />
-          <Input absolute position="to-bottom-left" />
-          <Input absolute position="to-bottom-right" />
+        <Rectangle currentValue={this.state}>
+          <Clipboard currentValue={this.state.topLeft} />
+          <Input updateData={this.updateDataTopLeft} absolute position="to-top-left" />
+          <Input updateData={this.updateDataTopRight} absolute position="to-top-right" />
+          <Input updateData={this.updateDataBottomLeft} absolute position="to-bottom-left" />
+          <Input updateData={this.updateDataBottomRight} absolute position="to-bottom-right" />
         </Rectangle>
       </div>
     );

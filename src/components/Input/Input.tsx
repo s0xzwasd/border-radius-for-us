@@ -19,7 +19,6 @@ class Input extends React.PureComponent<Props, State> {
 
   handleChange = (e: ChangeEvent<HTMLInputElement>) => {
     this.setState({ value: e.target.value }, () => this.props.updateData(this.state.value));
-    console.log('value input', this.state.value);
   };
 
   render() {
