@@ -5,19 +5,44 @@ import Header from '../components/Header';
 import Clipboard from '../components/Clipboard';
 import styles from './Main.module.scss';
 
-const Layout: React.SFC = () => {
-  return (
-    <div className={styles.wrapper}>
-      <Header>border-radius generator</Header>
-      <Rectangle>
-        <Clipboard />
-        <Input absolute position="to-top-left" />
-        <Input absolute position="to-top-right" />
-        <Input absolute position="to-bottom-left" />
-        <Input absolute position="to-bottom-right" />
-      </Rectangle>
-    </div>
-  );
-};
+class Layout extends React.PureComponent {
+  state = {
+    topLeft: 0,
+    topRight: 0,
+    bottomLeft: 0,
+    bottomRight: 0,
+  };
+
+  updateDataTopLeft = (value: React.ChangeEvent<HTMLInputElement>) => {
+    this.setState({ topLeft: value });
+  };
+
+  updateDataTopRight = (value: React.ChangeEvent<HTMLInputElement>) => {
+    this.setState({ topRight: value });
+  };
+
+  updateDataBottomLeft = (value: React.ChangeEvent<HTMLInputElement>) => {
+    this.setState({ bottomLeft: value });
+  };
+
+  updateDataBottomRight = (value: React.ChangeEvent<HTMLInputElement>) => {
+    this.setState({ bottomRight: value });
+  };
+
+  render() {
+    return (
+      <div className={styles.wrapper}>
+        <Header>border-radius generator</Header>
+        <Rectangle currentValue={this.state}>
+          <Clipboard currentValue={this.state.topLeft} />
+          <Input updateData={this.updateDataTopLeft} absolute position="to-top-left" />
+          <Input updateData={this.updateDataTopRight} absolute position="to-top-right" />
+          <Input updateData={this.updateDataBottomLeft} absolute position="to-bottom-left" />
+          <Input updateData={this.updateDataBottomRight} absolute position="to-bottom-right" />
+        </Rectangle>
+      </div>
+    );
+  }
+}
 
 export default Layout;
