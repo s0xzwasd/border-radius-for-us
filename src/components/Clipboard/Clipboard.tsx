@@ -15,10 +15,6 @@ class Clipboard extends React.PureComponent<Props> {
     document.execCommand('copy');
   };
 
-  componentDidUpdate() {
-    console.log('update');
-  }
-
   render(): JSX.Element {
     const { currentValue } = this.props;
 
