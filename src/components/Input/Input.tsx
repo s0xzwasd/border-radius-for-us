@@ -18,9 +18,13 @@ class Input extends React.PureComponent<Props, State> {
   };
 
   handleChange = (e: ChangeEvent<HTMLInputElement>): React.SetStateAction<void> => {
-    this.setState({ value: e.target.value }, () =>
-      this.props.updateData ? this.props.updateData(this.state.value) : null,
-    );
+    const regexp = /^[0-9\b]+$/;
+
+    if (regexp.test(e.target.value)) {
+      this.setState({ value: e.target.value }, () =>
+        this.props.updateData ? this.props.updateData(this.state.value) : null,
+      );
+    }
   };
 
   render(): JSX.Element {
