@@ -34,7 +34,7 @@ class Layout extends React.PureComponent {
       <div className={styles.wrapper}>
         <Header>border-radius generator</Header>
         <Rectangle currentValue={this.state}>
-          <Clipboard currentValue={this.state.topLeft} />
+          <Clipboard currentValue={this.state} />
           <Input updateData={this.updateDataTopLeft} absolute position="to-top-left" />
           <Input updateData={this.updateDataTopRight} absolute position="to-top-right" />
           <Input updateData={this.updateDataBottomLeft} absolute position="to-bottom-left" />

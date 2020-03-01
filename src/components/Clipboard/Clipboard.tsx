@@ -3,10 +3,11 @@ import Button from '../Button';
 import styles from './Clipboard.module.scss';
 
 type Props = {
-  currentValue: number | string;
+  currentValue: Record<string, number>;
 };
 
 class Clipboard extends React.PureComponent<Props> {
+  // TODO: refactor type
   textArea: any;
 
   copyToClipboard = (): void => {
@@ -19,11 +20,12 @@ class Clipboard extends React.PureComponent<Props> {
 
     return (
       <div>
-        <input
-          ref={(textarea): HTMLInputElement | null => (this.textArea = textarea)}
+        <textarea
+          spellCheck="false"
+          ref={(textarea): HTMLTextAreaElement | null => (this.textArea = textarea)}
           className={styles.clipboard}
-          value={`border-radius: ${currentValue}px;`}
-        ></input>
+          value={`border-radius: ${currentValue.topLeft}px ${currentValue.topRight}px ${currentValue.bottomLeft}px ${currentValue.bottomRight}px;`}
+        ></textarea>
         <Button onClick={this.copyToClipboard}>Copy to clipboard</Button>
       </div>
     );
