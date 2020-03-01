@@ -9,10 +9,6 @@ type Props = {
 };
 
 class Clipboard extends React.PureComponent<Props> {
-  constructor(props: Props) {
-    super(props);
-  }
-
   textArea: any;
 
   copyToClipboard = (e: any | null | undefined) => {
