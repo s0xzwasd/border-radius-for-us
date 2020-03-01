@@ -13,23 +13,23 @@ class Layout extends React.PureComponent {
     bottomRight: 0,
   };
 
-  updateDataTopLeft = (value: React.ChangeEvent<HTMLInputElement>) => {
+  updateDataTopLeft = (value: React.ChangeEvent<HTMLInputElement>): React.SetStateAction<void> => {
     this.setState({ topLeft: value });
   };
 
-  updateDataTopRight = (value: React.ChangeEvent<HTMLInputElement>) => {
+  updateDataTopRight = (value: React.ChangeEvent<HTMLInputElement>): React.SetStateAction<void> => {
     this.setState({ topRight: value });
   };
 
-  updateDataBottomLeft = (value: React.ChangeEvent<HTMLInputElement>) => {
+  updateDataBottomLeft = (value: React.ChangeEvent<HTMLInputElement>): React.SetStateAction<void> => {
     this.setState({ bottomLeft: value });
   };
 
-  updateDataBottomRight = (value: React.ChangeEvent<HTMLInputElement>) => {
+  updateDataBottomRight = (value: React.ChangeEvent<HTMLInputElement>): React.SetStateAction<void> => {
     this.setState({ bottomRight: value });
   };
 
-  render() {
+  render(): JSX.Element {
     return (
       <div className={styles.wrapper}>
         <Header>border-radius generator</Header>

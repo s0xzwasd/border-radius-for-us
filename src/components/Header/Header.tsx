@@ -5,7 +5,7 @@ type Props = {
   children: string;
 };
 
-const Header: Function = ({ children }: Props) => {
+const Header = ({ children }: Props): JSX.Element => {
   return <h1 className={styles.header}>{children}</h1>;
 };
 

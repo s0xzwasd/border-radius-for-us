@@ -1,9 +1,9 @@
 import React from 'react';
 import styles from './Rectangle.module.scss';
 
-type Props = { currentValue?: Record<string, any>; children?: React.ReactNode };
+type Props = { currentValue?: Record<string, number>; children?: React.ReactNode };
 
-const Rectangle = ({ currentValue, children }: Props) => {
+const Rectangle = ({ currentValue, children }: Props): JSX.Element => {
   return (
     <div
       style={{
