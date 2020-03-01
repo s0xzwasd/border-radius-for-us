@@ -1,41 +1,35 @@
 import React from 'react';
+import Button from '../Button';
 import styles from './Clipboard.module.scss';
 
-// TODO: button to another component
-// FIXME: make arrow function component
-
 type Props = {
-  currentValue: number | string;
+  currentValue: Record<string, number>;
 };
 
 class Clipboard extends React.PureComponent<Props> {
+  // TODO: refactor type
   textArea: any;
 
-  copyToClipboard = (e: any | null | undefined) => {
+  copyToClipboard = (): void => {
     this.textArea.select();
     document.execCommand('copy');
-    // This is just personal preference.
-    // I prefer to not show the the whole text area selected.
-    // e.target.focus();
-    // this.setState({ copySuccess: 'Copied!' });
   };
 
-  render() {
+  render(): JSX.Element {
     const { currentValue } = this.props;
+
     return (
       <div>
-        <input
-          ref={textarea => (this.textArea = textarea)}
+        <textarea
+          spellCheck="false"
+          ref={(textarea): HTMLTextAreaElement | null => (this.textArea = textarea)}
           className={styles.clipboard}
-          value={`border-radius: ${currentValue}px;`}
-        ></input>
-        <button type="button" className={styles.button} onClick={this.copyToClipboard}>
-          Copy to clipboard
-        </button>
+          value={`border-radius: ${currentValue.topLeft}px ${currentValue.topRight}px ${currentValue.bottomLeft}px ${currentValue.bottomRight}px;`}
+        ></textarea>
+        <Button onClick={this.copyToClipboard}>Copy to clipboard</Button>
       </div>
     );
   }
 }
 
-// TODO: refactor to func component
 export default Clipboard;
