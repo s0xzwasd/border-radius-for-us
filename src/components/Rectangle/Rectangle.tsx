@@ -3,6 +3,7 @@ import styles from './Rectangle.module.scss';
 
 type Props = { currentValue?: Record<string, number>; children?: React.ReactNode };
 
+// TODO: refactor component
 const Rectangle = ({ currentValue, children }: Props): JSX.Element => {
   return (
     <div
@@ -15,7 +16,6 @@ const Rectangle = ({ currentValue, children }: Props): JSX.Element => {
       className={styles.rectangle}
     >
       {children}
-      {console.log(currentValue)}
     </div>
   );
 };

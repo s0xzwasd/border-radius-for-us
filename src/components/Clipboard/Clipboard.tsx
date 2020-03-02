@@ -25,6 +25,7 @@ class Clipboard extends React.PureComponent<Props> {
           ref={(textarea): HTMLTextAreaElement | null => (this.textArea = textarea)}
           className={styles.clipboard}
           value={`border-radius: ${currentValue.topLeft}px ${currentValue.topRight}px ${currentValue.bottomLeft}px ${currentValue.bottomRight}px;`}
+          readOnly
         ></textarea>
         <Button onClick={this.copyToClipboard}>Copy to clipboard</Button>
       </div>
