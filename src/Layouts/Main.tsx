@@ -5,6 +5,8 @@ import Header from '../components/Header';
 import Clipboard from '../components/Clipboard';
 import styles from './Main.module.scss';
 
+// TODO: refactor state values
+// TODO: add eslint rule to props in alphabet
 class Layout extends React.PureComponent {
   state = {
     topLeft: 0,
@@ -13,6 +15,7 @@ class Layout extends React.PureComponent {
     bottomRight: 0,
   };
 
+  // TODO: refactor this function into one
   updateDataTopLeft = (value: React.ChangeEvent<HTMLInputElement>): React.SetStateAction<void> => {
     this.setState({ topLeft: value });
   };

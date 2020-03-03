@@ -2,6 +2,8 @@
 
 # border-radius-for-us
 
+![border-radius project in browser looks like](https://i.imgur.com/CPZ3hVG.png)
+
 Displays the border-radius property that CSS uses when a user creates a border. You can only change a specific side or all at once, then copy what you’ve done and paste into your code.
 
 [Try It Out!](https://b-radius-for-us.surge.sh/)
