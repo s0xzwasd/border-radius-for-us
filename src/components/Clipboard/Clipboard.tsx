@@ -6,6 +6,7 @@ type Props = {
   currentValue: Record<string, number>;
 };
 
+// TODO: textarea make a component
 class Clipboard extends React.PureComponent<Props> {
   // TODO: refactor type
   textArea: any;
@@ -24,7 +25,7 @@ class Clipboard extends React.PureComponent<Props> {
           spellCheck="false"
           ref={(textarea): HTMLTextAreaElement | null => (this.textArea = textarea)}
           className={styles.clipboard}
-          value={`border-radius: ${currentValue.topLeft}px ${currentValue.topRight}px ${currentValue.bottomLeft}px ${currentValue.bottomRight}px;`}
+          value={`border-radius: ${currentValue.topLeft}px ${currentValue.topRight}px ${currentValue.bottomLeft}px ${currentValue.bottomRight}px;`} // TODO: border-radius to const
           readOnly
         ></textarea>
         <Button onClick={this.copyToClipboard}>Copy to clipboard</Button>

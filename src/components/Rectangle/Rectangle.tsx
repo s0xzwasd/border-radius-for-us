@@ -3,7 +3,7 @@ import styles from './Rectangle.module.scss';
 
 type Props = { currentValue?: Record<string, number>; children?: React.ReactNode };
 
-// TODO: refactor component
+// TODO: refactor component style values
 const Rectangle = ({ currentValue, children }: Props): JSX.Element => {
   return (
     <div

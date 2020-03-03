@@ -12,6 +12,7 @@ type State = {
   value: number | string;
 };
 
+// TODO: refactor regexp updates and classNames in input to const
 class Input extends React.PureComponent<Props, State> {
   state = {
     value: 0,
