@@ -21,6 +21,13 @@ Displays the border-radius property that CSS uses when a user creates a border. 
 - [ ] User can select a specific browser prefix.
 - [ ] User can go and see the documentation for this property.
 
+### Used technologies and libraries
+
+- React
+- TypeScript
+- CSS Modules
+- create-react-app
+
 ### Available Scripts
 
 In the project directory, you can run:
