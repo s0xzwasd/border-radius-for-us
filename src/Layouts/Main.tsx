@@ -5,7 +5,6 @@ import Header from '../components/Header';
 import Clipboard from '../components/Clipboard';
 import styles from './Main.module.scss';
 
-// TODO: refactor state values
 // TODO: add eslint rule to props in alphabet
 class Layout extends React.PureComponent {
   state = {
@@ -15,21 +14,8 @@ class Layout extends React.PureComponent {
     bottomRight: 0,
   };
 
-  // TODO: refactor this function into one
-  updateDataTopLeft = (value: React.ChangeEvent<HTMLInputElement>): React.SetStateAction<void> => {
-    this.setState({ topLeft: value });
-  };
-
-  updateDataTopRight = (value: React.ChangeEvent<HTMLInputElement>): React.SetStateAction<void> => {
-    this.setState({ topRight: value });
-  };
-
-  updateDataBottomLeft = (value: React.ChangeEvent<HTMLInputElement>): React.SetStateAction<void> => {
-    this.setState({ bottomLeft: value });
-  };
-
-  updateDataBottomRight = (value: React.ChangeEvent<HTMLInputElement>): React.SetStateAction<void> => {
-    this.setState({ bottomRight: value });
+  updateData = (value: React.ChangeEvent<HTMLInputElement>, position: string): React.SetStateAction<void> => {
+    this.setState({ [position]: value });
   };
 
   render(): JSX.Element {
@@ -38,10 +24,10 @@ class Layout extends React.PureComponent {
         <Header>border-radius generator</Header>
         <Rectangle currentValue={this.state}>
           <Clipboard currentValue={this.state} />
-          <Input updateData={this.updateDataTopLeft} absolute position="to-top-left" />
-          <Input updateData={this.updateDataTopRight} absolute position="to-top-right" />
-          <Input updateData={this.updateDataBottomLeft} absolute position="to-bottom-left" />
-          <Input updateData={this.updateDataBottomRight} absolute position="to-bottom-right" />
+          <Input updateData={this.updateData} absolute position="topLeft" />
+          <Input updateData={this.updateData} absolute position="topRight" />
+          <Input updateData={this.updateData} absolute position="bottomLeft" />
+          <Input updateData={this.updateData} absolute position="bottomRight" />
         </Rectangle>
       </div>
     );
