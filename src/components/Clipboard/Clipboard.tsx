@@ -7,17 +7,37 @@ type Props = {
 };
 
 // TODO: textarea make a component
+// TODO: refactor calculateValues
 class Clipboard extends React.PureComponent<Props> {
-  // TODO: refactor type
-  textArea: any;
+  textArea!: HTMLTextAreaElement | null;
 
   copyToClipboard = (): void => {
-    this.textArea.select();
+    if (this.textArea) {
+      this.textArea.select();
+    }
+
     document.execCommand('copy');
   };
 
+  calculateValues = (
+    tLeft: string | number,
+    tRight: string | number,
+    bLeft: string | number,
+    bRight: string | number,
+  ): string => {
+    const calcArray = [tLeft, tRight, bLeft, bRight];
+
+    if (calcArray.every(v => v === calcArray[0])) {
+      return `border-radius: ${calcArray[0]}px;`;
+    } else {
+      return `border-radius: ${tLeft}px ${tRight}px ${bLeft}px ${bRight}px;`;
+    }
+  };
+
   render(): JSX.Element {
-    const { currentValue } = this.props;
+    const {
+      currentValue: { topLeft, topRight, bottomLeft, bottomRight },
+    } = this.props;
 
     return (
       <div>
@@ -25,7 +45,7 @@ class Clipboard extends React.PureComponent<Props> {
           spellCheck="false"
           ref={(textarea): HTMLTextAreaElement | null => (this.textArea = textarea)}
           className={styles.clipboard}
-          value={`border-radius: ${currentValue.topLeft}px ${currentValue.topRight}px ${currentValue.bottomLeft}px ${currentValue.bottomRight}px;`} // TODO: border-radius to const
+          value={this.calculateValues(topLeft, topRight, bottomLeft, bottomRight)}
           readOnly
         ></textarea>
         <Button onClick={this.copyToClipboard}>Copy to clipboard</Button>
