@@ -1,7 +1,6 @@
 import React, { ChangeEvent } from 'react';
 import styles from './Input.module.scss';
 
-// TODO: add types
 type Props = {
   absolute: true | false;
   position?: 'topLeft' | 'topRight' | 'bottomLeft' | 'bottomRight';
@@ -12,7 +11,6 @@ type State = {
   value: number | string;
 };
 
-// TODO: refactor regexp updates and classNames in input to const
 class Input extends React.PureComponent<Props, State> {
   state = {
     value: 0,
@@ -31,14 +29,9 @@ class Input extends React.PureComponent<Props, State> {
 
   render(): JSX.Element {
     const { absolute, position } = this.props;
+    const inputNames = `${styles.input} ${absolute ? styles.absolute : null} ${styles[position ? position : 0]}`;
 
-    return (
-      <input
-        className={`${styles.input} ${absolute ? styles.absolute : null} ${styles[position ? position : 0]}`}
-        value={this.state.value}
-        onChange={this.handleChange}
-      />
-    );
+    return <input className={inputNames} value={this.state.value} onChange={this.handleChange} />;
   }
 }
 

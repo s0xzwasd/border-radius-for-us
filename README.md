@@ -13,7 +13,7 @@ Displays the border-radius property that CSS uses when a user creates a border. 
 ## Application functionality
 
 - [x] User sees the created border-radius and can adjust its position.
-- [ ] User can only correct a specific side or all at once.
+- [x] User can only correct a specific side or all at once.
 - [x] User can copy the result.
 
 ### Additional functionality

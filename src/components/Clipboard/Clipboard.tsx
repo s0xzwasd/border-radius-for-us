@@ -6,8 +6,6 @@ type Props = {
   currentValue: Record<string, number>;
 };
 
-// TODO: textarea make a component
-// TODO: refactor calculateValues
 class Clipboard extends React.PureComponent<Props> {
   textArea!: HTMLTextAreaElement | null;
 
