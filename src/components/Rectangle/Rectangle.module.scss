@@ -12,3 +12,10 @@
   background-color: #79bac1;
   box-shadow: 0 0.5rem 1rem rgba(213, 213, 213, 0.5);
 }
+
+@media (max-width: 1440px) {
+  .rectangle {
+    width: 70%;
+    height: 40%;
+  }
+}

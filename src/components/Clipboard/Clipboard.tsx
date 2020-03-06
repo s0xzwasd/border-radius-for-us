@@ -1,6 +1,7 @@
 import React from 'react';
 import Button from '../Button';
 import styles from './Clipboard.module.scss';
+import Link from '../Link';
 
 type Props = {
   currentValue: Record<string, number>;
@@ -36,6 +37,7 @@ class Clipboard extends React.PureComponent<Props> {
     const {
       currentValue: { topLeft, topRight, bottomLeft, bottomRight },
     } = this.props;
+    const docLink = 'https://developer.mozilla.org/ru/docs/Web/CSS/border-radius';
 
     return (
       <div>
@@ -47,6 +49,7 @@ class Clipboard extends React.PureComponent<Props> {
           readOnly
         ></textarea>
         <Button onClick={this.copyToClipboard}>Copy to clipboard</Button>
+        <Link to={docLink}>Documentation</Link>
       </div>
     );
   }

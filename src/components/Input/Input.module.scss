@@ -33,3 +33,9 @@
   bottom: -35px;
   right: -35px;
 }
+
+@media (max-width: 1024px) {
+  .input {
+    width: 20%;
+  }
+}
