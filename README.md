@@ -19,7 +19,7 @@ Displays the border-radius property that CSS uses when a user creates a border. 
 ### Additional functionality
 
 - [ ] User can select a specific browser prefix.
-- [ ] User can go and see the documentation for this property.
+- [x] User can go and see the documentation for this property.
 
 ### Used technologies and libraries
 
