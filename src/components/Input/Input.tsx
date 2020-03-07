@@ -29,9 +29,10 @@ class Input extends React.PureComponent<Props, State> {
 
   render(): JSX.Element {
     const { absolute, position } = this.props;
+    const { value } = this.state;
     const inputNames = `${styles.input} ${absolute ? styles.absolute : null} ${styles[position ? position : 0]}`;
 
-    return <input className={inputNames} value={this.state.value} onChange={this.handleChange} />;
+    return <input className={inputNames} value={value} onChange={this.handleChange} />;
   }
 }
 
