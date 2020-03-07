@@ -1,11 +1,19 @@
 .clipboard {
+  display: block;
   resize: none;
   min-width: 300px;
   padding: 20px;
+  margin: 10px;
   background-color: #f1f3f4;
   cursor: copy;
   border: none;
   border: 1px solid #474e51;
+}
+
+.checkboxes {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 @media (max-width: 540px) {
