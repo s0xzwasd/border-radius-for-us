@@ -2,7 +2,7 @@
 
 # border-radius-for-us
 
-![border-radius project in browser looks like](https://i.imgur.com/FnlJVpq.png)
+![border-radius project in browser looks like](https://i.imgur.com/IbNRE51.png)
 
 Displays the border-radius property that CSS uses when a user creates a border. You can only change a specific side or all at once, then copy what you’ve done and paste into your code.
 
