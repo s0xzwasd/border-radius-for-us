@@ -13,9 +13,9 @@
     "@types/react-dom": "16.9.5",
     "babel-plugin-react-css-modules": "5.2.6",
     "node-sass": "4.13.1",
-    "react": "16.13.0",
+    "react": "16.13.1",
     "react-css-modules": "4.7.11",
-    "react-dom": "16.13.0",
+    "react-dom": "16.13.1",
     "react-scripts": "3.4.0",
     "typescript": "3.8.3"
   },
