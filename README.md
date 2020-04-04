@@ -1,6 +1,5 @@
-[![Build Status](https://travis-ci.com/s0xzwasd/border-radius-for-us.svg?token=cWkXJTYpFWktBDJYUWyS&branch=master)](https://travis-ci.com/s0xzwasd/border-radius-for-us)
-
 # border-radius-for-us
+[![Build Status](https://travis-ci.com/s0xzwasd/border-radius-for-us.svg?token=cWkXJTYpFWktBDJYUWyS&branch=master)](https://travis-ci.com/s0xzwasd/border-radius-for-us) ![GitHub](https://img.shields.io/github/license/s0xzwasd/border-radius-for-us) ![GitHub repo size](https://img.shields.io/github/repo-size/s0xzwasd/border-radius-for-us)
 
 ![border-radius project in browser looks like](https://i.imgur.com/IbNRE51.png)
 
