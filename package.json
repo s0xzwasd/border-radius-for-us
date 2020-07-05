@@ -1,6 +1,6 @@
 {
   "name": "border-radius-for-us",
-  "version": "0.25.0",
+  "version": "0.26.0",
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "5.11.0",
@@ -17,7 +17,7 @@
     "react-css-modules": "4.7.11",
     "react-dom": "16.13.1",
     "react-scripts": "3.4.1",
-    "typescript": "3.9.5"
+    "typescript": "3.9.6"
   },
   "scripts": {
     "start": "react-scripts start",
