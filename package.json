@@ -1,6 +1,6 @@
 {
   "name": "border-radius-for-us",
-  "version": "0.39.0",
+  "version": "0.40.0",
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "5.11.4",
@@ -8,7 +8,7 @@
     "@testing-library/user-event": "12.1.2",
     "@types/jest": "26.0.10",
     "@types/node": "12.12.34",
-    "@types/react": "16.9.46",
+    "@types/react": "16.9.48",
     "@types/react-css-modules": "4.6.2",
     "@types/react-dom": "16.9.8",
     "babel-plugin-react-css-modules": "5.2.6",
