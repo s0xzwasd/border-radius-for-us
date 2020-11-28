@@ -1,10 +1,10 @@
 {
   "name": "border-radius-for-us",
-  "version": "0.57.0",
+  "version": "0.58.0",
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "5.11.6",
-    "@testing-library/react": "11.2.1",
+    "@testing-library/react": "11.2.2",
     "@testing-library/user-event": "12.2.2",
     "@types/jest": "26.0.15",
     "@types/node": "12.12.34",
